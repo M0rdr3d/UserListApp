@@ -1,20 +1,22 @@
-
 #############################################
-I made some assumptions to solve the problem:
+USERLIST APP DEMO
+Made by Santiago Lazo B.
+#############################################
+I made some assumptions to solve this problem:
 
--For the suggestions I used only numbers despite that in the example we can see alphabetic characters but I consider that is better
- a suggestion of type 'john10' that 'john1a' so I decided that. Besides with 14 suggestions by default
+-For the suggestions I used only numbers despite that in the example we can see alphabetic characters but I consider that
+ a suggestion of type 'john10' is better than 'john1a' so I decided that. Besides with 14 suggestions by default
  its better to have a smaller set of characters.
 
 -The main algorithm is CASE INSENSITIVE so 'john' is a user and 'John' is another one
 
--For the words that are in black list I created an algorithm where a random character of the word is replaced by
+-For the words that are in black list I created an algorithm where a random character of the forbidden word is replaced by
   a configurable character in this case '_' I did this because the description of the problem about how to
   handle this forbidden word is not clear. Should I delete the whole world ??
 
 -There is not validation of special characters like: % & ñ etc..
 
--Any blank line in the files are not considered a valid word
+-Any blank line in the files(blacklist.txt or users.txt) are not considered a valid word
 
 -Any word in the files with spaces before and after are trimmed. I just let space between words
 
@@ -23,7 +25,7 @@ I made some assumptions to solve the problem:
 -For simplify testing  you can add data directly to the files blacklist.txt and users.txt inside RESOURCES
  folder in the test module (src/test/resources/)
 
--You can also run the program through the main class (console app)
+-You can also run the program through the main class (console app) (com.intertec.userlistapp.main.Main)
  here we are going to use the files blacklist.txt and users.txt inside RESOURCES folder (src/main/resources)
  in the main module but those paths are configurable in the config.properties.
  If you want you can change it.
@@ -31,6 +33,5 @@ I made some assumptions to solve the problem:
 
 
 #############################################
--You need Java 7 or 8 to run this program
--Maven
--This project was created with IntelliJ 2017
+-You need Java 8 to run this program
+-You can import the project in your IDE as a Maven project
